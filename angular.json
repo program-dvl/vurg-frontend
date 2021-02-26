@@ -24,7 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/vendor/waves/waves.min.css",
+              "src/assets/vendor/owlcarousel/css/owl.carousel.min.css",
+              "src/assets/vendor/magnific-popup/magnific-popup.css",
+              "src/assets/css/style.css"
             ],
             "scripts": []
           },
