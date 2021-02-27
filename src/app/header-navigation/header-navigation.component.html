@@ -1,21 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tradient </title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <!-- Custom Stylesheet -->
-    <!-- <link rel="stylesheet" href="../../assets/vendor/waves/waves.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="../../assets/css/style.css"> -->
+    <div class="header landing_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <nav class="navbar navbar-expand-lg navbar-light px-0">
+                        <a class="navbar-brand" [routerLink]="'/'"><img style="max-width: 70px;" src="../../assets/images/w_logo.png" alt="">
+                            <span></span></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-    
-</head>
-</html>
-
-
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav" *ngIf="currentUrl === '/'">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#" data-scroll-nav="0">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-scroll-nav="1">Market</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-scroll-nav="2">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-scroll-nav="3">Testimonial</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-scroll-nav="4">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dashboard_log">
+                            <div class="d-flex align-items-center">
+                                <div class="header_auth">
+                                    <a [routerLink]="'/login'" class="btn btn-success">Sign In</a>
+                                    <a [routerLink]="'/register'" class="btn btn-outline-primary">Sign Up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>

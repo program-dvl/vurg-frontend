@@ -30,7 +30,22 @@
               "src/assets/vendor/magnific-popup/magnific-popup.css",
               "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendor/jquery/jquery.min.js",
+              "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/vendor/waves/waves.min.js",
+              "src/assets/vendor/owlcarousel/js/owl.carousel.min.js",
+              "src/assets/js/plugins/owl-carousel-init.js",
+              "src/assets/vendor/scrollit/scrollIt.js",
+              "src/assets/js/plugins/scrollit-init.js",
+              "src/assets/vendor/jquery-sparkline/jquery.sparkline.min.js",
+              "src/assets/js/plugins/sparkline-init.js",
+              "src/assets/vendor/validator/jquery.validate.js",
+              "src/assets/vendor/validator/validator-init.js",
+              "src/assets/js/scripts.js",
+              "src/assets/vendor/magnific-popup/magnific-popup.js",
+              "src/assets/vendor/magnific-popup/magnific-popup-init.js"
+            ]
           },
           "configurations": {
             "production": {
