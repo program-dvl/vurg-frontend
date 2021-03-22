@@ -28,8 +28,7 @@
               "src/assets/vendor/waves/waves.min.css",
               "src/assets/vendor/owlcarousel/css/owl.carousel.min.css",
               "src/assets/vendor/magnific-popup/magnific-popup.css",
-              "src/assets/css/style.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "src/assets/css/style.css"
             ],
             "scripts": [
               "src/assets/vendor/jquery/jquery.min.js",
@@ -45,10 +44,7 @@
               "src/assets/vendor/validator/validator-init.js",
               "src/assets/js/scripts.js",
               "src/assets/vendor/magnific-popup/magnific-popup.js",
-              "src/assets/vendor/magnific-popup/magnific-popup-init.js",
-              "src/assets/vendor/circle-progress/circle-progress.min.js",
-              "src/assets/vendor/circle-progress/circle-progress-init.js",
-              "src/assets/vendor/apexchart/apexcharts.min.js",
+              "src/assets/vendor/magnific-popup/magnific-popup-init.js"
             ]
           },
           "configurations": {

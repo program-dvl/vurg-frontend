@@ -9267,5 +9267,8 @@ label.error {
     box-shadow: 0px 36px 48px rgba(31, 66, 135, 0.04); }
   .demo_img img {
     border-radius: 5px; }
-
+    #toast-container{
+      top: 2%!important;
+      right: 1%!important;
+    }
 /*# sourceMappingURL=style.css.map */

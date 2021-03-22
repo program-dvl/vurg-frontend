@@ -9,6 +9,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
 import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthHeaderComponent } from './auth-header/auth-header.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +24,18 @@ import { HomeComponent } from './home/home.component';
     PageNotFoundComponent,
     HeaderNavigationComponent,
     FooterNavigationComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent,
+    AuthHeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule 
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(), // ToastrModule added  
   ],
   providers: [],
   bootstrap: [AppComponent]

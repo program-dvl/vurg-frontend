@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class HomeComponent implements OnInit {
-
+export class DashboardComponent implements OnInit {
   loadAPI: Promise<any>;
-
-  constructor() { 
+  constructor() {
     this.loadAPI = new Promise((resolve) => {
       this.loadScript();
       resolve(true);
@@ -30,8 +28,8 @@ export class HomeComponent implements OnInit {
 
     if (!isFound) {
         var dynamicScripts = [
-          "./../assets/vendor/owlcarousel/js/owl.carousel.min.js",
-          "./../assets/js/plugins/owl-carousel-init.js"
+          "./../assets/vendor/apexchart/apexcharts.min.js",
+          "./../assets/vendor/apexchart/apexchart-init.js",
         ];
 
         for (var i = 0; i < dynamicScripts.length; i++) {

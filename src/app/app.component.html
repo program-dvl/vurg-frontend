@@ -5,8 +5,9 @@
         <div class="sk-child sk-bounce3"></div>
     </div>
 </div>
-<div id="main-wrapper pt-0">
-    <app-header-navigation></app-header-navigation>
+<div id="main-wrapper" [ngClass]="getClass()">
+    <app-header-navigation *ngIf="currentPage !== '/dashboard'"></app-header-navigation>
+    <app-auth-header *ngIf="currentPage === '/dashboard'"></app-auth-header>
     <router-outlet></router-outlet>
     <app-footer-navigation></app-footer-navigation>
 </div>
