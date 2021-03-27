@@ -17,6 +17,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.disableBtn = false;
+    var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+      if (userInfo ) {
+        this.router.navigateByUrl('/dashboard');
+      }
   }
 
   form = new FormGroup({

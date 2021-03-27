@@ -14,9 +14,14 @@ export class LoginComponent implements OnInit {
 
   constructor(private service:AuthService, private toastr: ToastrService, location: Location, private router:Router) {}
   disableBtn: boolean;
+  userName: string;
 
   ngOnInit(): void {
     this.disableBtn = false;
+    var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+      if (userInfo ) {
+        this.router.navigateByUrl('/dashboard');
+      }
   }
 
   form = new FormGroup({
