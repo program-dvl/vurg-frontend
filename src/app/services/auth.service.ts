@@ -11,11 +11,15 @@ export class AuthService {
   constructor(private httpClient: HttpClient) { }
   
   register(post){
-    return this.httpClient.post(this.apiURL+ "/register", post);
+      return this.httpClient.post(this.apiURL+ "/register", post);  
   }
 
   login(post){
     return this.httpClient.post(this.apiURL+ "/login", post);
+  }
+
+  getDashboard(){
+    return this.httpClient.get(this.apiURL+ "/user");
   }
   
 }

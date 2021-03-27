@@ -9,6 +9,7 @@ import { Location } from "@angular/common";
 })
 export class HeaderNavigationComponent implements OnInit {
   currentUrl: string;
+  userName: string;
   constructor(private router: Router,private location: Location) {
     router.events.subscribe(val => {
       if (location.path() != "") {
@@ -17,7 +18,6 @@ export class HeaderNavigationComponent implements OnInit {
         this.currentUrl = "/";
       }
     });
-    
   }
 
   ngOnInit(): void {

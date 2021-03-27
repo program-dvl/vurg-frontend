@@ -42,7 +42,7 @@
                             <div class="profile_log dropdown">
                                 <div class="user" data-toggle="dropdown">
                                     <span class="thumb"><i class="la la-user"></i></span>
-                                    <span class="name">Maria Pascle</span>
+                                    <span class="name">{{ userName }}</span>
                                     <span class="arrow"><i class="la la-angle-down"></i></span>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -58,7 +58,7 @@
                                     <a href="lock.html" class="dropdown-item">
                                         <i class="la la-lock"></i> Lock
                                     </a> -->
-                                    <a href="index.html" class="dropdown-item logout">
+                                    <a (click)="logout()" class="dropdown-item logout">
                                         <i class="la la-sign-out"></i> Logout
                                     </a>
                                 </div>

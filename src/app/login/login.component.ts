@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
     if (!this.form.invalid) {
       this.service.login(this.form.value)
       .subscribe((response) => {
+        localStorage.setItem('userInfo',JSON.stringify(response['data']));
         this.router.navigateByUrl('/dashboard');
       },
       error => {

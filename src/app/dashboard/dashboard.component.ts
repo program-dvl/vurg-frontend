@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   loadAPI: Promise<any>;
-  constructor() {
+  userName: string;
+  constructor(private service:AuthService, private router:Router) {
     this.loadAPI = new Promise((resolve) => {
       this.loadScript();
       resolve(true);
@@ -15,6 +18,12 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+     var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+      if (userInfo === null) {
+        this.router.navigateByUrl('/login');
+      } else {
+        this.userName = userInfo.name;
+      }
   }
 
   public loadScript() {        

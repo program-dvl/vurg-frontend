@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
 
   form = new FormGroup({
     password: new FormControl('', [Validators.required]),
+    name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email])
   });
 
@@ -32,21 +33,21 @@ export class RegisterComponent implements OnInit {
     this.disableBtn = true;
     this.form.markAllAsTouched();
     if (!this.form.invalid) {
-      this.service.register(this.form.value)
-      .subscribe((response) => {
-        this.router.navigateByUrl('/dashboard');
-      },
-      error => {
-        if (error.status == 422){
-          this.toastr.error(error.error.errors.message);
-          this.disableBtn = false;
-        }
-        if (error.status == 419){
-          this.toastr.error(error.error.message);
-          this.disableBtn = false;
-        }
-      });
+        this.service.register(this.form.value)
+        .subscribe((response) => {
+          localStorage.setItem('userInfo',JSON.stringify(response['data']));
+          this.router.navigateByUrl('/dashboard');
+        },
+        error => {
+          if (error.status == 422){
+            this.toastr.error(error.error.errors.message);
+            this.disableBtn = false;
+          }
+          if (error.status == 419){
+            this.toastr.error(error.error.message);
+            this.disableBtn = false;
+          }
+        });
     }
   }
-
 }
