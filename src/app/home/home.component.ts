@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   loadAPI: Promise<any>;
+  feature: any;
 
   constructor() { 
     this.loadAPI = new Promise((resolve) => {
@@ -17,6 +18,18 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.functionNr1();
+  }
+
+  functionNr1() {
+    var features = ["Earn", "Buy", "Convert", "Invest", "Pay","Receive", "Save", "Sell", "Send", "Spend", "Trade"];
+    var count = 0;
+    setInterval(e => {
+      var randomNumber = Math.floor(Math.random()*11);
+      count = (count + randomNumber) % features.length;
+      this.feature = features[count];
+      console.log(this.feature);
+    }, 1500);
   }
 
   public loadScript() {        

@@ -3,13 +3,18 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-xl-6 col-md-6">
                 <div class="intro-content">
-                    <h2>Buy and sell <br>crypto with Vurg</h2>
+                    <h2>{{feature}} <br>crypto with Vurg</h2>
                     <p>Buy and sell digital currencies in an easy way. Get your Vurg account, start accepting payments, and earn money.</p>
-                    <button class="btn arrow-hover">GET STARTED</button>
+                    <p class="ln-hgt-0 font-weight-bolder">Buy crypto with top payment methods.</p>
+                    <div class="header_auth">
+                        <a href="#" class="btn btn-left btn-success waves-effect">Interac e-Transfer</a>
+                        <a href="#" class="btn btn-success waves-effect">PayPal</a>
+                        <a href="#" class="btn btn-success waves-effect">Bank transfer</a>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6 py-md-5">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-body">
                         <div class="buy-sell-widget">
                             <form method="post" name="myform" class="currency_validate">
@@ -60,6 +65,124 @@
 
                             </form>
                         </div>
+                    </div>
+                </div> -->
+                <div class="card">
+                    <div class="card-body">
+                        <div class="buy-sell-widget">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a class="nav-link active" data-toggle="tab"
+                                        href="#buy">Buy</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sell">Sell</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content tab-content-default">
+                                <div class="tab-pane fade show active" id="buy" role="tabpanel">
+                                    <form method="post" name="myform" class="currency_validate">
+                                        <div class="form-group">
+                                            <label class="mr-sm-2">Currency</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text"><i
+                                                            class="cc BTC-alt"></i></label>
+                                                </div>
+                                                <select name='currency' class="form-control">
+                                                    <option value="">Select</option>
+                                                    <option value="bitcoin">Bitcoin</option>
+                                                    <option value="litecoin">Litecoin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mr-sm-2">Payment Method</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text"><i
+                                                            class="fa fa-bank"></i></label>
+                                                </div>
+                                                <select class="form-control" name="method">
+                                                    <option value="">Select</option>
+                                                    <option value="bank">Bank of America ********45845</option>
+                                                    <option value="master">Master Card ***********5458</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mr-sm-2">Enter your amount</label>
+                                            <div class="input-group">
+                                                <input type="text" name="currency_amount" class="form-control"
+                                                    placeholder="0.0214 BTC">
+                                                <input type="text" name="usd_amount" class="form-control"
+                                                    placeholder="125.00 USD">
+                                            </div>
+                                            <div class="d-flex justify-content-between mt-3">
+                                                <p class="mb-0">Monthly Limit</p>
+                                                <h6 class="mb-0">$49750 remaining</h6>
+                                            </div>
+                                        </div>
+                                        <button type="submit" name="submit"
+                                            class="btn btn-success btn-block">Exchange
+                                            Now</button>
+
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="sell">
+                                    <form method="post" name="myform" class="currency2_validate">
+                                        <div class="form-group">
+                                            <label class="mr-sm-2">Currency</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text"><i
+                                                            class="cc BTC-alt"></i></label>
+                                                </div>
+                                                <select name='currency' class="form-control">
+                                                    <option value="">Select</option>
+                                                    <option value="bitcoin">Bitcoin</option>
+                                                    <option value="litecoin">Litecoin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mr-sm-2">Payment Method</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <label class="input-group-text"><i
+                                                            class="fa fa-bank"></i></label>
+                                                </div>
+                                                <select class="form-control" name="method">
+                                                    <option value="">Select</option>
+                                                    <option value="bank">Bank of America ********45845</option>
+                                                    <option value="master">Master Card ***********5458</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="mr-sm-2">Enter your amount</label>
+                                            <div class="input-group">
+                                                <input type="text" name="currency_amount" class="form-control"
+                                                    placeholder="0.0214 BTC">
+                                                <input type="text" name="usd_amount" class="form-control"
+                                                    placeholder="125.00 USD">
+                                            </div>
+                                            <div class="d-flex justify-content-between mt-3">
+                                                <p class="mb-0">Monthly Limit</p>
+                                                <h6 class="mb-0">$49750 remaining</h6>
+                                            </div>
+                                        </div>
+                                        <button type="submit" name="submit"
+                                            class="btn btn-success btn-block">Exchange
+                                            Now</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

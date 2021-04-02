@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders   } from '@angular/common/http';
 import { environment } from '../../environments/environment';
   
 @Injectable({
@@ -7,8 +7,13 @@ import { environment } from '../../environments/environment';
 })
 export class AuthService {
   private apiURL = environment.apiURL;
-   
-  constructor(private httpClient: HttpClient) { }
+  private header = {} 
+  constructor(private httpClient: HttpClient) {
+    this.header = new HttpHeaders().set(
+       localStorage.getItem("token_type"),
+       localStorage.getItem("access_token")
+    );
+   }
   
   register(post){
       return this.httpClient.post(this.apiURL+ "/register", post);  
@@ -19,7 +24,7 @@ export class AuthService {
   }
 
   getDashboard(){
-    return this.httpClient.get(this.apiURL+ "/user");
+    return this.httpClient.get(this.apiURL+ "/user", {headers: this.header});
   }
   
 }

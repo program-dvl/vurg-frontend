@@ -15,21 +15,45 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav" *ngIf="currentUrl === '/'">
                                 <li class="nav-item">
+                                    <div class="account_money">
+                                        <ul>
+                                           <li class="crypto">
+                                              <span>Buy</span>
+                                              <span class="arrow">
+                                                 <i class="la la-angle-down" style="font-weight: bold;"></i>
+                                              </span>
+                                           </li>
+                                           <li class="usd" style="background-color: #00c52c;">
+                                              <span>Sell  </span>
+                                              <span class="arrow" style="padding: 10px;">
+                                                 <i class="la la-angle-down" style="font-weight: bold;"></i>
+                                              </span>
+                                           </li>
+                                        </ul>
+                                     </div>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link active" href="#" data-scroll-nav="0">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-scroll-nav="3">Testimonial</a>
+                                    <a class="nav-link" href="#">Become a Vendor</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" data-scroll-nav="4">Contact</a>
+                                    <a class="nav-link" href="#">Create an Offer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Wallet</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#" data-scroll-nav="4">Contact</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="dashboard_log">
                             <div class="d-flex align-items-center">
                                 <div class="header_auth">
-                                    <a [routerLink]="'/login'" class="btn btn-success">Sign In</a>
-                                    <a [routerLink]="'/register'" class="btn btn-outline-primary">Sign Up</a>
+                                    <a [routerLink]="'/login'" class="btn btn-success">Log In</a>
+                                    <a [routerLink]="'/register'" class="btn btn-outline-primary">Create an Account</a>
                                 </div>
                             </div>
                         </div>

@@ -40,6 +40,8 @@ export class LoginComponent implements OnInit {
       this.service.login(this.form.value)
       .subscribe((response) => {
         localStorage.setItem('userInfo',JSON.stringify(response['data']));
+        localStorage.setItem('token_type', response['data']['token_type']);
+        localStorage.setItem('access_token', response['data']['access_token']);
         this.router.navigateByUrl('/dashboard');
       },
       error => {
