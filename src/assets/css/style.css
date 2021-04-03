@@ -9329,8 +9329,22 @@ label.error {
   .header_auth .btn-left {
     margin-left: unset;
   }
-  .ln-hgt-0 {
+  .ln-hgt-crypto {
     line-height: 0px!important;
+    font-weight: bold;
+    display: inline;
+  }
+  .mt-15 {
+    margin-top: 15px!important;
+  }
+  .crypto-btn-1 {
+    margin: 15px 0px 0px 0px!important;
+  }
+  .crypto-btn-2 {
+    margin: 15px 0px 0px 10px!important;
+  } 
+  .crypto-btn-3 {
+    margin: 15px 0px 0px 10px!important;
   }
     
 /*# sourceMappingURL=style.css.map */
